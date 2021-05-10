@@ -9,5 +9,6 @@ import Foundation
 
 class REST {
     
-    let url = URL(string: "https://api.themoviedb.org/3/movie/550?api_key=7f83f0a91411cb45647d15d4ab954ae5")
+    static let baseUrl = "https://api.themoviedb.org/3"
+    static let baseUrlImage = "https://image.tmdb.org/t/p/w500"
 }

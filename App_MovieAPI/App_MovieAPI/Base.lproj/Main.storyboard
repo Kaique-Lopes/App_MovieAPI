@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -20,7 +19,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-aW-p3s">
                                 <rect key="frame" x="20" y="114" width="374" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5f9-8h-8VI">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5f9-8h-8VI" id="qnp-ac-6Wo">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Lu2-qk-amL">
+                                        <rect key="frame" x="0.0" y="68.000001907348633" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lu2-qk-amL" id="ueA-Qc-mAW">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sdT-AX-lGI">
+                                        <rect key="frame" x="0.0" y="111.66666984558105" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sdT-AX-lGI" id="rCl-iQ-cPC">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5z-fT-1bT">
                                 <rect key="frame" x="20" y="53" width="374" height="44"/>
@@ -33,9 +58,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
                             </tabBar>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpt-jJ-BiL">
-                                <rect key="frame" x="20" y="654" width="374" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpt-jJ-BiL">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Movies" image="list.dash" catalog="system" id="4bf-eS-fX9"/>
@@ -45,21 +69,51 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cpt-jJ-BiL" secondAttribute="bottom" id="dQg-ko-3ao"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cpt-jJ-BiL" secondAttribute="trailing" id="hEO-lz-0uD"/>
+                            <constraint firstItem="Cpt-jJ-BiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lN2-Pj-lVl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qA9-aW-p3s" id="KX4-lL-Slw"/>
+                        <segue destination="BpZ-eE-to7" kind="show" identifier="webkitview" id="wk9-hd-poL"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="88.858695652173921"/>
         </scene>
-        <!--View Controller-->
+        <!--Web Kit View Controller-->
         <scene sceneID="Z6U-vz-DHJ">
             <objects>
-                <viewController id="BpZ-eE-to7" sceneMemberID="viewController">
+                <viewController id="BpZ-eE-to7" customClass="WebKitViewController" customModule="App_MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mi1-xH-bVF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAT-SX-9pN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NU2-M3-xM2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WAT-SX-9pN" firstAttribute="top" secondItem="NU2-M3-xM2" secondAttribute="top" id="Bkw-zn-cBP"/>
+                            <constraint firstItem="WAT-SX-9pN" firstAttribute="leading" secondItem="NU2-M3-xM2" secondAttribute="leading" id="NhT-Zm-587"/>
+                            <constraint firstItem="NU2-M3-xM2" firstAttribute="trailing" secondItem="WAT-SX-9pN" secondAttribute="trailing" id="dda-R0-g4Z"/>
+                            <constraint firstItem="NU2-M3-xM2" firstAttribute="bottom" secondItem="WAT-SX-9pN" secondAttribute="bottom" id="mWk-6N-lZx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fAG-0A-1IA"/>
+                    <connections>
+                        <outlet property="webKit" destination="WAT-SX-9pN" id="Shl-B1-lAu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWz-mL-oZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
